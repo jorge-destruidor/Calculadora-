@@ -1,0 +1,23 @@
+<table>
+  <tr>
+<td>Primeiro numero</td>
+<td><input type="number" [(ngModel)]= "num1" name= "num1"></td>
+
+  </tr>
+  <tr>
+    <td>Segundo numero</td>
+    <td><input type="number" [(ngModel)]= "num2" name= "num2" ></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td class="center-content"><button (click) = "calc('soma')">Somar</button>
+          <td class="center-content"><button (click) = "calc('sub')">Subtração</button>
+            <td class="center-content"><button (click) = "calc('mul')">Multiplicação</button>
+              <td class="center-content"><button (click) = "calc('div')">Divisão</button>
+
+
+          <td>Resultado: {{resultado}}</td>
+          <td></td>
+          </tr>
+</table>

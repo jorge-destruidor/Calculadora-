@@ -18,8 +18,12 @@ export class SomaComponent {
       this.resultado = Number(this.num1) - Number(this.num2);
       break;
       case'mul':
-      this.resultado = Number(this.num1) - Number(this.num2);
+      this.resultado = Number(this.num1) * Number(this.num2);
+      break;
+      case'div':
+      this.resultado = Number(this.num1) / Number(this.num2);
       break;
 
   }
+}
 }

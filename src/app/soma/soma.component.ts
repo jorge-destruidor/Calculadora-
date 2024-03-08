@@ -23,6 +23,12 @@ export class SomaComponent {
       case'div':
       this.resultado = Number(this.num1) / Number(this.num2);
       break;
+      case 'raiz':
+        this.resultado = Math.sqrt(Number(this.num1));
+        break;
+        case 'por':
+          this.resultado = (Number(this.num1) * Number(this.num2)) / 100;
+          break;
 
   }
 }

@@ -1,23 +1,35 @@
-<table>
-  <tr>
-<td>Primeiro numero</td>
-<td><input type="number" [(ngModel)]= "num1" name= "num1"></td>
-
-  </tr>
-  <tr>
-    <td>Segundo numero</td>
-    <td><input type="number" [(ngModel)]= "num2" name= "num2" ></td>
-
-      </tr>
-      <tr>
-        <td></td>
-        <button (click) = "calc('soma')">Somar</button>
-          <button (click) = "calc('sub')">Subtração</button>
-            <button (click) = "calc('mul')">Multiplicação</button>
-              <button (click) = "calc('div')">Divisão</button>
-
-
-          <td>Resultado: {{resultado}}</td>
-          <td></td>
-          </tr>
-</table>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mx-auto">
+        <div class="card border-dark bg-black">
+          <div class="card-header bg-secondary text-white text-center">
+            <h4>Calculadora</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="num1" class="text-white">Primeiro número</label>
+                <input type="number" class="form-control form-control-sm" [(ngModel)]="num1" name="num1">
+              </div>
+              <div class="form-group">
+                <label for="num2" class="text-white">Segundo número</label>
+                <input type="number" class="form-control form-control-sm" [(ngModel)]="num2" name="num2">
+              </div>
+              <div class="form-group mt-3">
+                <button type="button" class="btn btn-warning btn-sm mr-2 mb-2" (click)="calc('soma')">Somar</button>
+                <button type="button" class="btn btn-warning btn-sm mr-2 mb-2" (click)="calc('sub')">Subtração</button>
+                <button type="button" class="btn btn-warning btn-sm mr-2 mb-2" (click)="calc('mul')">Multiplicação</button>
+                <button type="button" class="btn btn-warning btn-sm mr-2 mb-2" (click)="calc('div')">Divisão</button>
+                <button type="button" class="btn btn-warning btn-sm mr-2 mb-2" (click)="calc('raiz')">Raiz Quadrada</button>
+                <button type="button" class="btn btn-warning btn-sm mb-2" (click)="calc('por')">Porcentagem</button>
+              </div>
+            </form>
+            <div class="form-group">
+              <label for="resultado" class="text-white">Resultado:</label>
+              <input type="text" class="form-control form-control-sm" id="resultado" name="resultado" [value]="resultado" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
